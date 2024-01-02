@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_45sdp"
+
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#4196ff"
+            android:textStyle="bold"
+            app:titleTextColor="#fff">
+
+            <ImageView
+                android:id="@+id/notification"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_200sdp"
+                android:src="@drawable/ic_notification" />
+        </android.support.v7.widget.Toolbar>
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/slider"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_200sdp" />
+
+        <com.daimajia.slider.library.Indicators.PagerIndicator
+            android:id="@+id/banner_slider_indicator"
+            style="@style/AndroidImageSlider_Indicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/btncolor"
+            android:visibility="gone"
+            app:selected_color="@color/white"
+            app:unselected_color="@android:color/holo_blue_light" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/slider"
+            android:layout_margin="@dimen/_4sdp"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add_to_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_4sdp"
+        android:background="@color/btncolor"
+        android:text="Add To Cart"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp" />
+</RelativeLayout>

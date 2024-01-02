@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4196ff"
+        android:textStyle="bold"
+        app:titleTextColor="#fff"></android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_summary_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginBottom="@dimen/_65sdp"></android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linearlayout"
+        android:background="#4196ff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/total_prize"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/_4sdp"
+            android:text="Total Prize"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/summary_totalprize"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginRight="@dimen/_6sdp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="Rs 2000 /-"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/place_order_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_3sdp"
+            android:layout_weight="1"
+            android:background="@color/btncolor"
+            android:padding="@dimen/_4sdp"
+            android:text="Place Order"
+            android:textColor="#fff"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/modifyOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_3sdp"
+            android:layout_weight="1"
+            android:background="@color/btncolor"
+            android:padding="@dimen/_4sdp"
+            android:text="Modify Order"
+            android:textColor="#fff"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>
